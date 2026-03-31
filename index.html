@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venture+ | Modern SaaS Solutions</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Montserrat:wght@500;700;800&display=swap" rel="stylesheet">
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Swiper Carousel -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        corePlugins: {
+          preflight: false,
+        }
+      }
+    </script>
+    <!-- Custom CSS -->
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Scroll Progress -->
+    <div class="scroll-progress-bar" id="scrollBar"></div>
+
+    <!-- Floating Contact Button -->
+    <a href="#contact" class="floating-btn shadow-lg" data-aos="zoom-in" data-aos-delay="1000">
+        <i class="fa-solid fa-message"></i>
+    </a>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand logo-fade-in" href="#">
+                <img src="assets/logoventure.jpeg" alt="Venture+ Logo" class="brand-logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link !text-gray-900 !font-bold !opacity-100 hover:!text-[#8B305E]" href="">Home</a></li>
+                    <li class="nav-item"><a class="nav-link !text-gray-900 !font-bold !opacity-100 hover:!text-[#8B305E]" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link !text-gray-900 !font-bold !opacity-100 hover:!text-[#8B305E]" href="#service">Services</a></li>
+                 
+                    <li class="nav-item"><a class="nav-link !text-gray-900 !font-bold !opacity-100 hover:!text-[#8B305E]" href="#mandoob">Mandoob</a></li>
+                    <li class="nav-item"><a class="nav-link !text-gray-900 !font-bold !opacity-100 hover:!text-[#8B305E]" href="#contact">Contact</a></li>
+                </ul>
+                <a href="#contact" class="btn btn-primary-custom d-none d-lg-inline-block">Get Started</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home" class="hero-section d-flex align-items-center relative overflow-hidden">
+        <!-- Grid Background with Triangular Elements -->
+        <div class="absolute inset-0 overflow-hidden pointer-events-none">
+            <!-- Main Grid Pattern - More Visible -->
+            <div class="absolute inset-0 opacity-[0.15]" style="background-image: linear-gradient(#8B305E 1px, transparent 1px), linear-gradient(90deg, #8B305E 1px, transparent 1px); background-size: 80px 80px;"></div>
+            
+            <!-- Secondary Grid Dots - More Visible -->
+            <div class="absolute inset-0 opacity-[0.25]" style="background-image: radial-gradient(#8B305E 1.5px, transparent 1.5px); background-size: 40px 40px;"></div>
+            
+            <!-- Triangles parallel to Venture+ text -->
+            <div class="absolute" style="top: 165px; left: 0; right: 0; height: 0;">
+                <!-- Left side parallel -->
+                <div class="absolute opacity-45 animate-orbit-cw" style="width: 0; height: 0; left: 25%; animation-duration: 9s;">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" style="transform: translate(-50%, -50%);"><path d="M12 3L21 21H3L12 3Z" fill="#8B305E"/></svg>
+                </div>
+                <!-- Center parallel -->
+                <div class="absolute opacity-40 animate-orbit-ccw" style="width: 0; height: 0; left: 50%; animation-duration: 11s;">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" style="transform: translate(-50%, -50%);"><path d="M4 4H20L4 20V4Z" fill="#8B305E"/></svg>
+                </div>
+                <!-- Right side parallel -->
+                <div class="absolute opacity-50 animate-orbit-slow" style="width: 0; height: 0; left: 75%; animation-duration: 14s;">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" style="transform: translate(-50%, -50%);"><path d="M20 4V20H4L20 4Z" fill="#8B305E"/></svg>
+                </div>
+            </div>
+            
+            <!-- Triangles orbiting around Venture+ text -->
+            <div class="absolute" style="top: 160px; left: 50%; transform: translateX(-50%);">
+                <!-- Orbit clockwise - close -->
+                <div class="absolute opacity-50 animate-orbit-cw" style="width: 0; height: 0; left: 50%; top: 50%;">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" style="transform: translate(-50%, -50%);"><path d="M12 3L21 21H3L12 3Z" fill="#8B305E"/></svg>
+                </div>
+                <!-- Orbit counter-clockwise - medium -->
+                <div class="absolute opacity-40 animate-orbit-ccw" style="width: 0; height: 0; left: 50%; top: 50%; animation-delay: -3s;">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" style="transform: translate(-50%, -50%);"><path d="M4 4H20L4 20V4Z" fill="#8B305E"/></svg>
+                </div>
+                <!-- Orbit slow - far -->
+                <div class="absolute opacity-35 animate-orbit-slow" style="width: 0; height: 0; left: 50%; top: 50%; animation-delay: -6s;">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" style="transform: translate(-50%, -50%);"><path d="M20 4V20H4L20 4Z" fill="#8B305E"/></svg>
+                </div>
+                <!-- Circle pulse -->
+                <div class="absolute opacity-45 animate-circle-pulse" style="width: 0; height: 0; left: 50%; top: 50%; animation-delay: -2s;">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" style="transform: translate(-50%, -50%);"><path d="M12 20L4 4H20L12 20Z" fill="#8B305E"/></svg>
+                </div>
+            </div>
+            
+            <!-- Additional orbital triangles - Top left void -->
+            <div class="absolute" style="top: 80px; left: 10%;">
+                <div class="absolute opacity-40 animate-orbit-cw" style="width: 0; height: 0; left: 50%; top: 50%; animation-duration: 10s;">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" style="transform: translate(-50%, -50%);"><path d="M12 3L21 21H3L12 3Z" fill="#8B305E"/></svg>
+                </div>
+                <div class="absolute opacity-35 animate-orbit-slow" style="width: 0; height: 0; left: 50%; top: 50%; animation-delay: -4s; animation-duration: 18s;">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" style="transform: translate(-50%, -50%);"><path d="M4 4H20L4 20V4Z" fill="#8B305E"/></svg>
+                </div>
+            </div>
+            
+            <!-- Additional orbital triangles - Top right void -->
+            <div class="absolute" style="top: 100px; right: 15%;">
+                <div class="absolute opacity-45 animate-orbit-ccw" style="width: 0; height: 0; left: 50%; top: 50%; animation-duration: 14s;">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" style="transform: translate(-50%, -50%);"><path d="M20 4V20H4L20 4Z" fill="#8B305E"/></svg>
+                </div>
+                <div class="absolute opacity-30 animate-circle-pulse" style="width: 0; height: 0; left: 50%; top: 50%; animation-delay: -3s; animation-duration: 8s;">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" style="transform: translate(-50%, -50%);"><path d="M12 20L4 4H20L12 20Z" fill="#8B305E"/></svg>
+                </div>
+            </div>
+            
+            <!-- Additional orbital triangles - Bottom left void -->
+            <div class="absolute" style="bottom: 120px; left: 15%;">
+                <div class="absolute opacity-38 animate-orbit-cw" style="width: 0; height: 0; left: 50%; top: 50%; animation-duration: 12s;">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" style="transform: translate(-50%, -50%);"><path d="M12 3L21 21H3L12 3Z" fill="#8B305E"/></svg>
+                </div>
+                <div class="absolute opacity-32 animate-orbit-ccw" style="width: 0; height: 0; left: 50%; top: 50%; animation-delay: -5s; animation-duration: 16s;">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" style="transform: translate(-50%, -50%);"><path d="M4 4H20L4 20V4Z" fill="#8B305E"/></svg>
+                </div>
+            </div>
+            
+            <!-- Additional orbital triangles - Bottom right void -->
+            <div class="absolute" style="bottom: 100px; right: 10%;">
+                <div class="absolute opacity-42 animate-orbit-slow" style="width: 0; height: 0; left: 50%; top: 50%; animation-duration: 20s;">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" style="transform: translate(-50%, -50%);"><path d="M20 4V20H4L20 4Z" fill="#8B305E"/></svg>
+                </div>
+                <div class="absolute opacity-35 animate-circle-pulse" style="width: 0; height: 0; left: 50%; top: 50%; animation-delay: -1s; animation-duration: 7s;">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" style="transform: translate(-50%, -50%);"><path d="M12 20L4 4H20L12 20Z" fill="#8B305E"/></svg>
+                </div>
+            </div>
+            
+            <!-- Additional orbital triangles - Center bottom void -->
+            <div class="absolute" style="bottom: 80px; left: 45%;">
+                <div class="absolute opacity-33 animate-orbit-cw" style="width: 0; height: 0; left: 50%; top: 50%; animation-duration: 9s;">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" style="transform: translate(-50%, -50%);"><path d="M12 3L21 21H3L12 3Z" fill="#8B305E"/></svg>
+                </div>
+                <div class="absolute opacity-28 animate-orbit-ccw" style="width: 0; height: 0; left: 50%; top: 50%; animation-delay: -6s; animation-duration: 13s;">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" style="transform: translate(-50%, -50%);"><path d="M4 4H20L4 20V4Z" fill="#8B305E"/></svg>
+                </div>
+            </div>
+            
+            <!-- More orbital triangles - Upper middle void -->
+            <div class="absolute" style="top: 60px; left: 35%;">
+                <div class="absolute opacity-38 animate-orbit-ccw" style="width: 0; height: 0; left: 50%; top: 50%; animation-duration: 11s;">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" style="transform: translate(-50%, -50%);"><path d="M12 2L22 20H2L12 2Z" fill="#8B305E"/></svg>
+                </div>
+                <div class="absolute opacity-32 animate-circle-pulse" style="width: 0; height: 0; left: 50%; top: 50%; animation-delay: -2s; animation-duration: 7s;">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" style="transform: translate(-50%, -50%);"><path d="M4 10L20 10L12 22L4 10Z" fill="#8B305E"/></svg>
+                </div>
+            </div>
+            
+            <!-- More orbital triangles - Right middle void -->
+            <div class="absolute" style="top: 40%; right: 8%;">
+                <div class="absolute opacity-40 animate-orbit-slow" style="width: 0; height: 0; left: 50%; top: 50%; animation-duration: 14s;">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" style="transform: translate(-50%, -50%);"><path d="M20 6V18H4L20 6Z" fill="#8B305E"/></svg>
+                </div>
+                <div class="absolute opacity-30 animate-orbit-cw" style="width: 0; height: 0; left: 50%; top: 50%; animation-delay: -4s; animation-duration: 10s;">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" style="transform: translate(-50%, -50%);"><path d="M6 18L18 18L12 6L6 18Z" fill="#8B305E"/></svg>
+                </div>
+            </div>
+            
+            <!-- More orbital triangles - Left middle void -->
+            <div class="absolute" style="top: 45%; left: 5%;">
+                <div class="absolute opacity-35 animate-orbit-ccw" style="width: 0; height: 0; left: 50%; top: 50%; animation-duration: 12s;">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" style="transform: translate(-50%, -50%);"><path d="M4 6H20L4 18V6Z" fill="#8B305E"/></svg>
+                </div>
+                <div class="absolute opacity-25 animate-circle-pulse" style="width: 0; height: 0; left: 50%; top: 50%; animation-delay: -3s; animation-duration: 8s;">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" style="transform: translate(-50%, -50%);"><path d="M12 4L4 16H20L12 4Z" fill="#8B305E"/></svg>
+                </div>
+            </div>
+            
+            <!-- More orbital triangles - Far top left -->
+            <div class="absolute" style="top: 40px; left: 5%;">
+                <div class="absolute opacity-30 animate-orbit-slow" style="width: 0; height: 0; left: 50%; top: 50%; animation-duration: 16s;">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" style="transform: translate(-50%, -50%);"><path d="M8 4L16 4L12 16L8 4Z" fill="#8B305E"/></svg>
+                </div>
+            </div>
+            
+            <!-- More orbital triangles - Far top right -->
+            <div class="absolute" style="top: 50px; right: 5%;">
+                <div class="absolute opacity-35 animate-orbit-cw" style="width: 0; height: 0; left: 50%; top: 50%; animation-duration: 13s;">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" style="transform: translate(-50%, -50%);"><path d="M4 12L12 4L20 12L12 20L4 12Z" fill="#8B305E"/></svg>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container relative z-10">
+            <div class="row align-items-center">
+                <div class="col-lg-6 hero-content" data-aos="fade-up">
+                    <h1 class="display-4 font-bold tracking-tight text-gray-900 mb-4 font-['Montserrat'] hero-title">
+                        Elevate Your Business With <span class="venture-animated">Venture+</span>
+                    </h1>
+                    <p class="text-lg leading-loose text-gray-500 mb-8 max-w-lg slide-fade-in-text" style="animation-delay: 0.5s">
+                        Experience a new era of corporate growth. We deliver high-end, intelligent solutions with a modern SaaS aesthetics tailored for forward-thinking enterprises.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 items-start">
+                        <a href="#service" class="bg-[#8B305E] text-white px-8 py-4 rounded-full font-medium transition-all duration-300 hover:bg-[#5B2A45] hover:shadow-[0_10px_20px_rgba(139,48,94,0.2)] hover:-translate-y-1 btn-primary-custom">Explore Services <i class="fa-solid fa-arrow-right ml-2 text-sm"></i></a>
+                        <a href="#about" class="bg-white text-[#8B305E] border-2 border-[#8B305E] px-8 py-4 rounded-full font-medium transition-all duration-300 hover:bg-[#8B305E] hover:text-white hover:-translate-y-1 btn-primary-custom">Learn More</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 hero-image-wrapper mt-12 mt-lg-0 relative" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="absolute inset-0 bg-gradient-to-tr from-[#8B305E]/15 to-transparent blur-3xl -z-10 rounded-full animate-pulse" style="animation-duration: 4s;"></div>
+                    <img src="assets/venture_hero.png" alt="Venture+ SaaS Hub" class="img-fluid floating-img drop-shadow-2xl rounded-[3rem] border-4 border-white/20">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="page-divider" aria-hidden="true"></div>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 bg-gray-50/50 d-flex align-items-center min-h-[80vh] about-section relative overflow-hidden">
+        <!-- Background Image -->
+        <div class="absolute inset-0 opacity-65 z-0">
+            <img src="assets/office.png" class="w-full h-full object-cover" alt="Venture UAE Business Solutions" />
+            <div class="absolute inset-0 bg-[#8B305E]/20"></div>
+        </div>
+        
+        <div class="container relative z-10">
+            <div class="row align-items-center mb-12">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <h2 class="text-3xl font-bold font-['Montserrat'] text-black inline-block relative mb-4 text-reveal">Who We Are
+                        <div class="heading-underline"></div>
+                    </h2>
+                    <div class="text-content-wrapper">
+                        <p class="text-lg leading-relaxed mb-4 slide-fade-in-text text-black" style="animation-delay: 0.3s;">
+                            Venture+ is your premier partner for business consultancy and regulatory compliance in the UAE. We specialize in navigating the complex landscape of UAE Federal Tax Authority (FTA) regulations to ensure your operations are seamless and secure.
+                        </p>
+                        <p class="text-lg leading-relaxed mb-4 slide-fade-in-text text-black" style="animation-delay: 0.5s;">
+                            With deep expertise in local market dynamics, we deliver high-end, tailored solutions that safeguard your enterprise while driving sustainable growth.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="offering-cycle-container relative" style="margin-top: -2rem;">
+                        <div class="offering-header text-center mb-6">
+                            <h3 class="text-2xl font-bold mb-2" style="color: #000000; text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">Our Premium Offerings</h3>
+                            <div class="header-underline mx-auto" style="width: 60px; height: 3px; background: linear-gradient(90deg, #8B305E, #D64292); border-radius: 2px;"></div>
+                        </div>
+                        <div class="offering-cycle-wrapper text-center mb-6">
+                            <div class="offering-icon-wrapper mb-4">
+                                <div class="offering-icon-bg" style="background: white; width: 80px; height: 80px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);">
+                                    <i class="fa-solid fa-shield-halved offering-icon" style="color: #8B305E; font-size: 2rem;"></i>
+                                </div>
+                            </div>
+                            <div class="offering-cycle-text text-4xl font-bold mb-4" style="color: #000000; -webkit-text-fill-color: #000000;">
+                                <span class="cycle-word-wrapper">
+                                    <span class="cycle-word">Business Compliance</span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="offering-description" style="background: #ffffff; padding: 1.5rem; border-radius: 1.5rem; border: 1px solid rgba(139, 48, 94, 0.2); box-shadow: 0 8px 32px rgba(139, 48, 94, 0.08);">
+                            <p id="offering-description-text" class="text-lg mb-0 font-bold" style="color: #000000; line-height: 1.6;">Comprehensive regulatory solutions tailored to your business needs</p>
+                        </div>
+                        <div class="offering-indicators flex justify-center mt-4 space-x-2">
+                            <span class="indicator w-2 h-2 rounded-full" style="background: #8B305E;"></span>
+                            <span class="indicator w-2 h-2 rounded-full" style="background: rgba(139, 48, 94, 0.3);"></span>
+                            <span class="indicator w-2 h-2 rounded-full" style="background: rgba(139, 48, 94, 0.3);"></span>
+                            <span class="indicator w-2 h-2 rounded-full" style="background: rgba(139, 48, 94, 0.3);"></span>
+                            <span class="indicator w-2 h-2 rounded-full" style="background: rgba(139, 48, 94, 0.3);"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Modern Status Items Section - Bottom -->
+            <div class="row justify-content-center mt-16" data-aos="fade-up" data-aos-delay="400">
+                <div class="col-auto">
+                    <div class="modern-status-item text-center">
+                        <div class="status-number-wrapper">
+                            <span class="counter" data-target="40">0</span>%
+                        </div>
+                        <div class="status-label">Cost Savings</div>
+                    </div>
+                </div>
+                <div class="col-auto">
+                    <div class="modern-status-item text-center">
+                        <div class="status-number-wrapper">
+                            <span class="counter" data-target="98">0</span>%
+                        </div>
+                        <div class="status-label">Client Success</div>
+                    </div>
+                </div>
+                <div class="col-auto">
+                    <div class="modern-status-item text-center">
+                        <div class="status-number-wrapper">
+                            <span class="counter" data-target="15">0</span>+
+                        </div>
+                        <div class="status-label">Years Experience</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Modern Feature Pills -->
+            <div class="row justify-content-center mt-12" data-aos="fade-up" data-aos-delay="600">
+                <div class="col-auto">
+                    <div class="modern-feature-pill">
+                        <i class="fa-solid fa-shield-halved"></i>
+                        <span>Compliance First</span>
+                    </div>
+                </div>
+                <div class="col-auto">
+                    <div class="modern-feature-pill">
+                        <i class="fa-solid fa-chart-line"></i>
+                        <span>Growth Ready</span>
+                    </div>
+                </div>
+                <div class="col-auto">
+                    <div class="modern-feature-pill">
+                        <i class="fa-solid fa-award"></i>
+                        <span>Expert Team</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="page-divider" aria-hidden="true"></div>
+    <!-- Service Section -->
+    <section id="service" class="py-6 bg-gray-50/50 relative overflow-hidden">
+        <!-- Triangles to fill void spaces in service section -->
+        <div class="absolute" style="top: 80px; left: 8%;">
+            <div class="absolute opacity-30 animate-orbit-cw" style="width: 0; height: 0; left: 50%; top: 50%; animation-duration: 12s;">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" style="transform: translate(-50%, -50%);"><path d="M12 3L21 21H3L12 3Z" fill="#8B305E"/></svg>
+            </div>
+        </div>
+        <div class="absolute" style="top: 120px; right: 10%;">
+            <div class="absolute opacity-35 animate-orbit-ccw" style="width: 0; height: 0; left: 50%; top: 50%; animation-duration: 15s;">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" style="transform: translate(-50%, -50%);"><path d="M4 4H20L4 20V4Z" fill="#8B305E"/></svg>
+            </div>
+        </div>
+        <div class="absolute" style="bottom: 100px; left: 5%;">
+            <div class="absolute opacity-25 animate-orbit-slow" style="width: 0; height: 0; left: 50%; top: 50%; animation-duration: 18s;">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" style="transform: translate(-50%, -50%);"><path d="M20 4V20H4L20 4Z" fill="#8B305E"/></svg>
+            </div>
+        </div>
+        <div class="absolute" style="bottom: 150px; right: 8%;">
+            <div class="absolute opacity-32 animate-circle-pulse" style="width: 0; height: 0; left: 50%; top: 50%; animation-duration: 8s;">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" style="transform: translate(-50%, -50%);"><path d="M12 20L4 4H20L12 20Z" fill="#8B305E"/></svg>
+            </div>
+        </div>
+        <div class="absolute" style="top: 200px; left: 15%;">
+            <div class="absolute opacity-28 animate-orbit-cw" style="width: 0; height: 0; left: 50%; top: 50%; animation-duration: 11s;">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" style="transform: translate(-50%, -50%);"><path d="M12 2L22 20H2L12 2Z" fill="#8B305E"/></svg>
+            </div>
+        </div>
+        <div class="absolute" style="top: 60px; left: 40%;">
+            <div class="absolute opacity-33 animate-orbit-ccw" style="width: 0; height: 0; left: 50%; top: 50%; animation-duration: 14s;">
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" style="transform: translate(-50%, -50%);"><path d="M4 10L20 10L12 22L4 10Z" fill="#8B305E"/></svg>
+            </div>
+        </div>
+        <div class="absolute" style="bottom: 60px; right: 20%;">
+            <div class="absolute opacity-30 animate-orbit-slow" style="width: 0; height: 0; left: 50%; top: 50%; animation-duration: 16s;">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" style="transform: translate(-50%, -50%);"><path d="M6 18L18 18L12 6L6 18Z" fill="#8B305E"/></svg>
+            </div>
+        </div>
+        <div class="absolute" style="bottom: 180px; left: 25%;">
+            <div class="absolute opacity-27 animate-circle-pulse" style="width: 0; height: 0; left: 50%; top: 50%; animation-duration: 9s;">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" style="transform: translate(-50%, -50%);"><path d="M8 4L16 4L12 16L8 4Z" fill="#8B305E"/></svg>
+            </div>
+        </div>
+
+        <div class="container text-center text-lg-start relative z-10">
+            <div data-aos="fade-up" class="mb-8 text-center w-full">
+                <h2 class="service-heading-banner text-3xl font-bold font-['Montserrat'] text-white relative mb-4 text-reveal w-full">Our Services
+                    <div class="absolute -bottom-3 left-1/2 -translate-x-1/2 h-1 w-16 bg-gradient-to-r from-[#8B305E] to-[#D64292] rounded-full"></div>
+                </h2>
+                <p class="service-heading-copy text-black mt-6 leading-relaxed mx-auto text-lg tracking-wide max-w-3xl">Comprehensive Business Consultancy for Efficiency & Compliance in the UAE.<br>From regulatory approvals to digital transformation, we streamline your operations<br>with tailored solutions that drive growth and ensure long-term success.</p>
+            </div>
+            <div class="service-carousel-shell">
+                <div class="service-carousel-controls">
+                    <div class="swiper-button-next service-carousel-next" aria-label="Next service">
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                </div>
+                <div class="swiper service-carousel">
+            <div class="swiper-wrapper">
+                <!-- 1. Digital PRO -->
+                <div class="swiper-slide" data-aos="fade-up" data-aos-delay="50">
+                    <div class="group relative w-full rounded-[1.5rem] bg-white p-1.5 shadow-sm ring-1 ring-black/5 transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl hover:shadow-[#8B305E]/20 hover:ring-[#8B305E]/40 flex flex-col cursor-pointer">
+                        <div class="absolute -right-20 -top-20 z-0 h-40 w-40 rounded-full bg-gradient-to-br from-[#8B305E]/10 to-[#D64292]/10 blur-2xl transition-all duration-700 group-hover:scale-150 group-hover:bg-[#8B305E]/20"></div>
+                        <div class="relative z-10">
+                            <div class="mb-2 flex justify-center">
+                                <img src="img/Digital PRO.png" alt="Digital PRO" class="w-full h-48 object-cover rounded-2xl shadow-sm">
+                            </div>
+                            <h5 class="mb-1 text-lg font-bold text-[#8B305E] transition-colors duration-300 group-hover:text-[#8B305E]">Digital PRO</h5>
+                            <p class="text-base leading-snug text-gray-900 mb-0" style="line-height: 1.4;">Comprehensive digital transformation solutions for modern businesses. We provide customized consulting models that handle critical PR, HR management, employee engagement, and operational workflows through advanced digital platforms and intelligent automation tools.</p>
+                        </div>
+                        <div class="absolute bottom-0 left-0 h-1 w-0 bg-gradient-to-r from-[#8B305E] to-[#D64292] transition-all duration-700 ease-out group-hover:w-full"></div>
+                    </div>
+                </div>
+                <!-- 2. ELDA -->
+                <div class="swiper-slide" data-aos="fade-up" data-aos-delay="150">
+                    <div class="group relative w-full rounded-[1.5rem] bg-white p-1.5 shadow-sm ring-1 ring-black/5 transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl hover:shadow-[#8B305E]/20 hover:ring-[#8B305E]/40 flex flex-col cursor-pointer">
+                        <div class="absolute -right-20 -top-20 z-0 h-40 w-40 rounded-full bg-gradient-to-br from-[#8B305E]/10 to-[#D64292]/10 blur-2xl transition-all duration-700 group-hover:scale-150 group-hover:bg-[#8B305E]/20"></div>
+                        <div class="relative z-10">
+                            <div class="mb-2 flex justify-center">
+                                <img src="img/Entity Legal Audit (ELDA).png" alt="Entity Legal Audit" class="w-full h-48 object-cover rounded-2xl shadow-sm">
+                            </div>
+                            <h5 class="mb-1 text-lg font-bold text-[#8B305E] transition-colors duration-300 group-hover:text-[#8B305E]">Entity Legal Audit</h5>
+                            <p class="text-base leading-snug text-gray-900 mb-0" style="line-height: 1.4;">Thorough auditing of UAE legal documents and corporate records to identify compliance gaps, mitigate verification risks, and maintain up-to-date regulatory adherence. Our expert team ensures your business documentation meets all federal and local authority requirements.</p>
+                        </div>
+                        <div class="absolute bottom-0 left-0 h-1 w-0 bg-gradient-to-r from-[#8B305E] to-[#D64292] transition-all duration-700 ease-out group-hover:w-full"></div>
+                    </div>
+                </div>
+                <!-- 3. Venture Connect -->
+                <div class="swiper-slide" data-aos="fade-up" data-aos-delay="250">
+                    <div class="group relative w-full rounded-[1.5rem] bg-white p-1.5 shadow-sm ring-1 ring-black/5 transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl hover:shadow-[#8B305E]/20 hover:ring-[#8B305E]/40 flex flex-col cursor-pointer">
+                        <div class="absolute -right-20 -top-20 z-0 h-40 w-40 rounded-full bg-gradient-to-br from-[#8B305E]/10 to-[#D64292]/10 blur-2xl transition-all duration-700 group-hover:scale-150 group-hover:bg-[#8B305E]/20"></div>
+                        <div class="relative z-10">
+                            <div class="mb-2 flex justify-center">
+                                <img src="img/Screenshot 2026-03-28 133628.png" alt="Venture Connect" class="w-full h-48 object-cover rounded-2xl shadow-sm">
+                            </div>
+                            <h5 class="mb-1 text-lg font-bold text-[#8B305E] transition-colors duration-300 group-hover:text-[#8B305E]">Venture Connect</h5>
+                            <p class="text-base leading-snug text-gray-900 mb-0" style="line-height: 1.4;">24/7 dedicated consultancy support providing prompt service responses and tailored business management capabilities. Our round-the-clock team ensures you have expert guidance whenever you need it, minimizing downtime and maximizing operational efficiency.</p>
+                        </div>
+                        <div class="absolute bottom-0 left-0 h-1 w-0 bg-gradient-to-r from-[#8B305E] to-[#D64292] transition-all duration-700 ease-out group-hover:w-full"></div>
+                    </div>
+                </div>
+                <!-- 4. PRO Services -->
+                <div class="swiper-slide" data-aos="fade-up" data-aos-delay="350">
+                    <div class="group relative w-full rounded-[1.5rem] bg-white p-1.5 shadow-sm ring-1 ring-black/5 transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl hover:shadow-[#8B305E]/20 hover:ring-[#8B305E]/40 flex flex-col cursor-pointer">
+                        <div class="absolute -right-20 -top-20 z-0 h-40 w-40 rounded-full bg-gradient-to-br from-[#8B305E]/10 to-[#D64292]/10 blur-2xl transition-all duration-700 group-hover:scale-150 group-hover:bg-[#8B305E]/20"></div>
+                        <div class="relative z-10">
+                            <div class="mb-2 flex justify-center">
+                                <img src="img/Screenshot 2026-03-28 133649.png" alt="PRO Services" class="w-full h-48 object-cover rounded-2xl shadow-sm">
+                            </div>
+                            <h5 class="mb-1 text-lg font-bold text-[#8B305E] transition-colors duration-300 group-hover:text-[#8B305E]">PRO Services</h5>
+                            <p class="text-base leading-snug text-gray-900 mb-0" style="line-height: 1.4;">Complete PRO support for visas, work permits, Emirates ID processing, and essential governmental procedures. We handle documentation, submissions, follow-ups, and approvals for both large corporations and SMEs, ensuring seamless workforce mobility.</p>
+                        </div>
+                        <div class="absolute bottom-0 left-0 h-1 w-0 bg-gradient-to-r from-[#8B305E] to-[#D64292] transition-all duration-700 ease-out group-hover:w-full"></div>
+                    </div>
+                </div>
+                <!-- 5. Managed IT Services -->
+                <div class="swiper-slide" data-aos="fade-up" data-aos-delay="50">
+                    <div class="group relative w-full rounded-[1.5rem] bg-white p-1.5 shadow-sm ring-1 ring-black/5 transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl hover:shadow-[#8B305E]/20 hover:ring-[#8B305E]/40 flex flex-col cursor-pointer">
+                        <div class="absolute -right-20 -top-20 z-0 h-40 w-40 rounded-full bg-gradient-to-br from-[#8B305E]/10 to-[#D64292]/10 blur-2xl transition-all duration-700 group-hover:scale-150 group-hover:bg-[#8B305E]/20"></div>
+                        <div class="relative z-10">
+                            <div class="mb-2 flex justify-center">
+                                <img src="img/managed it services.png" alt="Managed IT Services" class="w-full h-48 object-cover rounded-2xl shadow-sm">
+                            </div>
+                            <h5 class="mb-1 text-lg font-bold text-[#8B305E] transition-colors duration-300 group-hover:text-[#8B305E]">Managed IT Services</h5>
+                            <p class="text-base leading-snug text-gray-900 mb-0" style="line-height: 1.4;">End-to-end IT infrastructure solutions encompassing web and mobile application development, cloud migration, cybersecurity implementation, and fully integrated ERP consulting services. We help businesses leverage technology for competitive advantage.</p>
+                        </div>
+                        <div class="absolute bottom-0 left-0 h-1 w-0 bg-gradient-to-r from-[#8B305E] to-[#D64292] transition-all duration-700 ease-out group-hover:w-full"></div>
+                    </div>
+                </div>
+                <!-- 6. Commercial Licensing -->
+                <div class="swiper-slide" data-aos="fade-up" data-aos-delay="150">
+                    <div class="group relative w-full rounded-[1.5rem] bg-white p-1.5 shadow-sm ring-1 ring-black/5 transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl hover:shadow-[#8B305E]/20 hover:ring-[#8B305E]/40 flex flex-col cursor-pointer">
+                        <div class="absolute -right-20 -top-20 z-0 h-40 w-40 rounded-full bg-gradient-to-br from-[#8B305E]/10 to-[#D64292]/10 blur-2xl transition-all duration-700 group-hover:scale-150 group-hover:bg-[#8B305E]/20"></div>
+                        <div class="relative z-10">
+                            <div class="mb-2 flex justify-center">
+                                <img src="img/commercial licensing.png" alt="Commercial Licensing" class="w-full h-48 object-cover rounded-2xl shadow-sm">
+                            </div>
+                            <h5 class="mb-1 text-lg font-bold text-[#8B305E] transition-colors duration-300 group-hover:text-[#8B305E]">Commercial Licensing</h5>
+                            <p class="text-base leading-snug text-gray-900 mb-0" style="line-height: 1.4;">Expert guidance through UAE company registration, trade license acquisition, and renewal processes. We provide optimized assistance navigating Department of Economic Development requirements, ensuring your business maintains valid operational status.</p>
+                        </div>
+                        <div class="absolute bottom-0 left-0 h-1 w-0 bg-gradient-to-r from-[#8B305E] to-[#D64292] transition-all duration-700 ease-out group-hover:w-full"></div>
+                    </div>
+                </div>
+                <!-- 7. VAT Consultancy -->
+                <div class="swiper-slide" data-aos="fade-up" data-aos-delay="250">
+                    <div class="group relative w-full rounded-[1.5rem] bg-white p-1.5 shadow-sm ring-1 ring-black/5 transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl hover:shadow-[#8B305E]/20 hover:ring-[#8B305E]/40 flex flex-col cursor-pointer">
+                        <div class="absolute -right-20 -top-20 z-0 h-40 w-40 rounded-full bg-gradient-to-br from-[#8B305E]/10 to-[#D64292]/10 blur-2xl transition-all duration-700 group-hover:scale-150 group-hover:bg-[#8B305E]/20"></div>
+                        <div class="relative z-10">
+                            <div class="mb-2 flex justify-center">
+                                <img src="img/Digital PRO.png" alt="VAT & Accounting" class="w-full h-48 object-cover rounded-2xl shadow-sm">
+                            </div>
+                            <h5 class="mb-1 text-lg font-bold text-[#8B305E] transition-colors duration-300 group-hover:text-[#8B305E]">VAT & Accounting</h5>
+                            <p class="text-base leading-snug text-gray-900 mb-0" style="line-height: 1.4;">Complete tax filing services, professional accountant recruitment, and expert internal and external auditing ensuring full Federal Tax Authority compliance. We help businesses maintain accurate financial records and meet all regulatory reporting obligations.</p>
+                        </div>
+                        <div class="absolute bottom-0 left-0 h-1 w-0 bg-gradient-to-r from-[#8B305E] to-[#D64292] transition-all duration-700 ease-out group-hover:w-full"></div>
+                    </div>
+                </div>
+                <!-- 8. Venture+ ASB -->
+                <div class="swiper-slide" data-aos="fade-up" data-aos-delay="350">
+                    <div class="group relative w-full rounded-[1.5rem] bg-white p-1.5 shadow-sm ring-1 ring-black/5 transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl hover:shadow-[#8B305E]/20 hover:ring-[#8B305E]/40 flex flex-col cursor-pointer">
+                        <div class="absolute -right-20 -top-20 z-0 h-40 w-40 rounded-full bg-gradient-to-br from-[#8B305E]/10 to-[#D64292]/10 blur-2xl transition-all duration-700 group-hover:scale-150 group-hover:bg-[#8B305E]/20"></div>
+                        <div class="relative z-10">
+                            <div class="mb-2 flex justify-center">
+                                <img src="img/Entity Legal Audit (ELDA).png" alt="Venture+ ASB" class="w-full h-48 object-cover rounded-2xl shadow-sm">
+                            </div>
+                            <h5 class="mb-1 text-lg font-bold text-[#8B305E] transition-colors duration-300 group-hover:text-[#8B305E]">Venture+ ASB</h5>
+                            <p class="text-base leading-snug text-gray-900 mb-0" style="line-height: 1.4;">Admin Support Board services functioning as a dedicated support panel bridging customers, operations, and service providers. We streamline communication, coordinate deliverables, and ensure seamless project execution across all stakeholder touchpoints.</p>
+                        </div>
+                        <div class="absolute bottom-0 left-0 h-1 w-0 bg-gradient-to-r from-[#8B305E] to-[#D64292] transition-all duration-700 ease-out group-hover:w-full"></div>
+                    </div>
+                </div>
+            </div>
+                    <!-- Pagination -->
+                    <div class="swiper-pagination service-carousel-pagination"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+     <div class="page-divider" aria-hidden="true"></div>
+
+
+    <!-- Features Section -->
+    <section id="features" class="py-24 bg-white relative overflow-hidden">
+        <!-- Background Image -->
+        <div class="absolute inset-0 opacity-100 z-0">
+            <img src="img/bg.png" class="w-full h-full object-cover" alt="Venture+ Features" />
+            <div class="absolute inset-0 bg-white/50"></div>
+        </div>
+        
+        <div class="features-corner features-corner-top-left" aria-hidden="true">
+            <span class="features-corner-fill"></span>
+            <span class="features-corner-outline"></span>
+        </div>
+        <div class="features-corner features-corner-top-right" aria-hidden="true">
+            <span class="features-corner-fill"></span>
+            <span class="features-corner-outline"></span>
+        </div>
+        <div class="features-corner features-corner-bottom-left" aria-hidden="true">
+            <span class="features-corner-fill"></span>
+            <span class="features-corner-outline"></span>
+        </div>
+        <div class="features-corner features-corner-bottom-right" aria-hidden="true">
+            <span class="features-corner-fill"></span>
+            <span class="features-corner-outline"></span>
+        </div>
+        
+        <div class="container text-center relative z-10">
+            <div data-aos="fade-up" class="mb-16 text-center max-w-2xl mx-auto">
+                <h2 class="text-3xl font-bold font-['Montserrat'] text-gray-900 inline-block relative mb-4 text-reveal">Why Choose Us
+                    <div class="heading-underline"></div>
+                </h2>
+                <p class="text-black mt-6 leading-relaxed" style="font-weight: 900;">Smart Solutions for Transparent, Efficient, and Compliant Business Operations</p>
+            </div>
+            <div class="features-cycle-wrap mx-auto" data-aos="fade-up" data-aos-delay="150">
+                <div class="flex items-center justify-center mb-3">
+                    <i class="fas fa-check-circle text-[#8B305E] mr-2"></i>
+                    <p class="features-cycle-label mb-0 font-bold" style="font-size: 18px; font-family: monospace; font-weight: 900; color: #8B305E; text-transform: uppercase; letter-spacing: 0.1em; text-shadow: none;">Built for businesses that value</p>
+                </div>
+                <h3 class="features-cycle-heading font-['Montserrat'] mb-4">
+                    <span class="features-cycle-text cycle-text" data-words="Transparency,Time Efficiency,Legal Compliance,Cost Saving,Fast Coordination,Operational Clarity">Transparency</span>
+                </h3>
+                <p class="features-cycle-description mb-0 font-bold" style="font-weight: 900;">
+                    We combine responsive support, compliant workflows, and practical execution so your team moves faster without losing control.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <div class="page-divider" aria-hidden="true"></div>
+
+    <!-- Mandoob Section -->
+    <section id="mandoob" class="py-24 bg-white relative overflow-hidden">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6 mandoob-media-column" data-aos="fade-right">
+                    <div class="mandoob-media-shell">
+                        <div class="mandoob-media-panel">
+                            <div class="mandoob-media-mark" aria-label="Mandoob">
+                                <div class="mandoob-media-title">MANDOOB</div>
+                                <div class="mandoob-media-subtitle">مندوب</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-up">
+                    <div class="max-w-xl ms-lg-auto">
+                        <h2 class="text-3xl font-bold font-['Montserrat'] text-gray-900 mb-4 text-reveal">
+                            Mandoob for
+                            <span class="mandoob-cycle-text" data-words="Government Approvals,Document Delivery,Official Follow-ups,Application Submissions,Business Representation,Courier Support,Permit Processing,Doorstep Collection,Authority Visits,Compliance Tasks">Government Approvals</span>
+                        </h2>
+                        <p class="text-lg text-gray-500 leading-relaxed mb-4">
+                            Our Mandoob service gives your business a dedicated representative, courier, and task handler to manage document delivery, approvals, submissions, collections, and official follow-ups with speed and precision.
+                        </p>
+                        <p class="text-lg text-gray-500 leading-relaxed mb-8">
+                            From ministry visits and permit processing to doorstep collection and day-to-day coordination, we reduce delays, improve response time, keep you compliant, and free your team to stay focused on growth.
+                        </p>
+                        <div class="row g-4">
+                            <div class="col-sm-6">
+                                <div class="h-full rounded-[1.75rem] bg-gray-50 p-6 ring-1 ring-black/5 shadow-sm">
+                                    <div class="mb-4 w-full h-32 rounded-2xl bg-[#8B305E]/10 overflow-hidden">
+                                        <img src="news/support.png" alt="Fast Processing" class="w-full h-full object-cover object-center">
+                                    </div>
+                                    <h3 class="text-lg font-bold text-gray-900 mb-2">Fast Processing</h3>
+                                    <p class="text-sm leading-relaxed text-gray-500 mb-0">Timely submissions, collections, approvals, and document handling without unnecessary back and forth.</p>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="h-full rounded-[1.75rem] bg-gray-50 p-6 ring-1 ring-black/5 shadow-sm">
+                                    <div class="mb-4 w-full h-32 rounded-2xl bg-[#8B305E]/10 overflow-hidden">
+                                        <img src="news/reliable.png" alt="Reliable Support" class="w-full h-full object-cover object-center">
+                                    </div>
+                                    <h3 class="text-lg font-bold text-gray-900 mb-2">Reliable Support</h3>
+                                    <p class="text-sm leading-relaxed text-gray-500 mb-0">A trusted point of contact for authority visits, courier support, official tasks, and ongoing business requirements.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#contact" class="inline-flex items-center gap-2 mt-8 bg-[#8B305E] text-white px-8 py-4 rounded-full font-medium transition-all duration-300 hover:bg-[#5B2A45] hover:-translate-y-1 hover:shadow-[0_10px_20px_rgba(139,48,94,0.2)]">
+                            Talk To Our Team <i class="fa-solid fa-arrow-right text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="page-divider" aria-hidden="true"></div>
+
+    <!-- Trends & Updates Section -->
+    <section id="trends" class="py-24 bg-white relative overflow-hidden">
+        <div class="container relative z-10">
+            <div data-aos="fade-up" class="mb-16 text-center max-w-2xl mx-auto">
+                <h2 class="text-3xl font-bold font-['Montserrat'] text-gray-900 inline-block relative mb-4 text-reveal">Trends & Updates
+                    <div class="heading-underline"></div>
+                </h2>
+                <p class="text-gray-600 mt-6 leading-relaxed">Stay informed with the latest business insights, regulatory changes, and market trends in the UAE</p>
+            </div>
+            
+            <div class="trends-container" data-aos="fade-up" data-aos-delay="200">
+                <!-- Main Featured Trend -->
+                <div class="trend-featured">
+                    <div class="trend-featured-image">
+                        <img src="news/Gemini_Generated_Image_65j8l565j8l565j8.png" alt="UAE Business Trends" class="featured-img">
+                        <div class="featured-overlay">
+                            <div class="featured-badge">Featured</div>
+                            <div class="featured-meta">
+                                <span class="featured-date">March 2024</span>
+                                <span class="featured-category">Regulatory Update</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="trend-featured-content">
+                        <h3 class="featured-title">New VAT Regulations Impact UAE Businesses</h3>
+                        <p class="featured-excerpt">Latest Federal Tax Authority updates require immediate compliance adjustments for enterprises across all sectors. Understanding these changes is crucial for maintaining operational efficiency and avoiding penalties.<br><br>The new regulations introduce comprehensive changes to the existing VAT framework, including simplified filing procedures for quarterly submissions, expanded documentation requirements for cross-border transactions, and enhanced digital reporting standards that mandate real-time invoice tracking. All VAT-registered businesses must adapt their accounting systems to accommodate these new requirements.<br><br>Key implementation deadlines are approaching, with full compliance required by the end of Q2 2024. Companies should begin system upgrades immediately and ensure staff receive proper training on the new protocols. Failure to comply may result in significant fines and operational restrictions.<br><br>Venture+ provides comprehensive VAT compliance support, helping businesses navigate these regulatory changes seamlessly. Our expert team assists with system integration, staff training, and ongoing compliance monitoring to ensure your business remains fully compliant with all Federal Tax Authority requirements.</p>
+                        <div class="featured-footer">
+                            <a href="#" class="featured-link">Continue Reading <i class="fas fa-arrow-right ml-2"></i></a>
+                            <div class="featured-stats">
+                                <span><i class="far fa-clock"></i> 5 min read</span>
+                                <span><i class="far fa-eye"></i> 2.3k views</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Side Trends -->
+                <div class="trends-sidebar">
+                    <div class="trend-side-item">
+                        <div class="trend-side-number">I</div>
+                        <div class="trend-side-content">
+                            <div class="side-meta">
+                                <span class="side-date">March 2024</span>
+                                <span class="side-category">Digital Innovation</span>
+                            </div>
+                            <h4 class="side-title">Digital Transformation Accelerates in UAE</h4>
+                            <p class="side-excerpt">Government initiatives drive rapid digital adoption across business services.</p>
+                            <img src="news/12.png" alt="Digital Transformation" class="side-image">
+                        </div>
+                    </div>
+
+                    <div class="trend-side-item">
+                        <div class="trend-side-number">II</div>
+                        <div class="trend-side-content">
+                            <div class="side-meta">
+                                <span class="side-date">February 2024</span>
+                                <span class="side-category">Market Analysis</span>
+                            </div>
+                            <h4 class="side-title">UAE Economic Growth Exceeds Expectations</h4>
+                            <p class="side-excerpt">Strong performance across key sectors creates new opportunities for business expansion.</p>
+                            <img src="news/11.png" alt="Economic Growth" class="side-image">
+                        </div>
+                    </div>
+
+                    <div class="trend-side-item">
+                        <div class="trend-side-number">III</div>
+                        <div class="trend-side-content">
+                            <div class="side-meta">
+                                <span class="side-date">February 2024</span>
+                                <span class="side-category">Compliance</span>
+                            </div>
+                            <h4 class="side-title">ESG Reporting Requirements Updated</h4>
+                            <p class="side-excerpt">New environmental, social, and governance standards affect all registered businesses.</p>
+                            <img src="news/22.png" alt="ESG Compliance" class="side-image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="page-divider" aria-hidden="true"></div>
+
+    
+
+    
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-24 faq-section">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-4" data-aos="fade-right">
+                    <div class="faq-side-panel">
+                        <div class="faq-side-orb faq-side-orb-one"></div>
+                        <div class="faq-side-orb faq-side-orb-two"></div>
+                        <div class="faq-question-mark-wrap" aria-hidden="true">
+                            <span class="faq-question-mark">?</span>
+                        </div>
+                        <div class="faq-kicker">Need Clarity?</div>
+                        <h2 class="faq-heading text-reveal">Frequently Asked Questions</h2>
+                        <p class="faq-intro mb-0">
+                            Quick answers about our consultancy, compliance support, operational services, and how we help businesses move faster in the UAE.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-8" data-aos="fade-left" data-aos-delay="120">
+                    <div class="faq-list" role="list">
+                        <article class="faq-item is-open" role="listitem">
+                            <button class="faq-trigger" type="button" aria-expanded="true" aria-controls="faq-panel-1" id="faq-trigger-1">
+                                <span>What services does Venture+ provide?</span>
+                                <span class="faq-icon" aria-hidden="true"></span>
+                            </button>
+                            <div class="faq-panel" id="faq-panel-1" role="region" aria-labelledby="faq-trigger-1">
+                                <p>
+                                    Venture+ provides business consultancy, compliance support, PRO services, managed IT services, commercial licensing assistance, VAT and accounting support, and operational coordination solutions for businesses in the UAE.
+                                </p>
+                            </div>
+                        </article>
+
+                        <article class="faq-item" role="listitem">
+                            <button class="faq-trigger" type="button" aria-expanded="false" aria-controls="faq-panel-2" id="faq-trigger-2">
+                                <span>Can you help with regulatory compliance and government procedures?</span>
+                                <span class="faq-icon" aria-hidden="true"></span>
+                            </button>
+                            <div class="faq-panel" id="faq-panel-2" role="region" aria-labelledby="faq-trigger-2" hidden>
+                                <p>
+                                    Yes. We support businesses with legal audit, VAT-related compliance, licensing requirements, document handling, submissions, approvals, and other essential government-facing procedures.
+                                </p>
+                            </div>
+                        </article>
+
+                        <article class="faq-item" role="listitem">
+                            <button class="faq-trigger" type="button" aria-expanded="false" aria-controls="faq-panel-3" id="faq-trigger-3">
+                                <span>Is Venture+ suitable for startups as well as established companies?</span>
+                                <span class="faq-icon" aria-hidden="true"></span>
+                            </button>
+                            <div class="faq-panel" id="faq-panel-3" role="region" aria-labelledby="faq-trigger-3" hidden>
+                                <p>
+                                    Yes. Our services are structured for both growing startups and established enterprises that need dependable support across compliance, administration, IT, and business operations.
+                                </p>
+                            </div>
+                        </article>
+
+                        <article class="faq-item" role="listitem">
+                            <button class="faq-trigger" type="button" aria-expanded="false" aria-controls="faq-panel-4" id="faq-trigger-4">
+                                <span>How does your Mandoob service help day-to-day operations?</span>
+                                <span class="faq-icon" aria-hidden="true"></span>
+                            </button>
+                            <div class="faq-panel" id="faq-panel-4" role="region" aria-labelledby="faq-trigger-4" hidden>
+                                <p>
+                                    Our Mandoob service acts as a dedicated representative for document delivery, permit processing, approvals, collections, official follow-ups, and time-sensitive coordination with authorities.
+                                </p>
+                            </div>
+                        </article>
+
+                        <article class="faq-item" role="listitem">
+                            <button class="faq-trigger" type="button" aria-expanded="false" aria-controls="faq-panel-5" id="faq-trigger-5">
+                                <span>How do I get started with Venture+?</span>
+                                <span class="faq-icon" aria-hidden="true"></span>
+                            </button>
+                            <div class="faq-panel" id="faq-panel-5" role="region" aria-labelledby="faq-trigger-5" hidden>
+                                <p>
+                                    You can start by contacting our team through the form below. We’ll understand your business needs, recommend the right support model, and guide you through the next steps.
+                                </p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="page-divider" aria-hidden="true"></div>
+
+    <!-- Contact Section -->
+ <section id="contact" class="d-flex align-items-center">
+<div class="container relative">
+<!-- Background Ambient Blur -->
+<div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-[600px] w-[600px] rounded-full bg-gradient-to-br from-[#8B305E]/5 to-transparent blur-[120px] -z-10"></div>
+
+    <div class="row justify-content-center" data-aos="zoom-in-up">
+        <div class="col-lg-10 p-0 rounded-[3.5rem] ring-1 ring-black/5 flex flex-col md:flex-row group contact-card-hanged">
+            
+            <!-- 4 Attachment Corners (Pins) with Animation -->
+            <div class="contact-corner corner-tl"><span class="contact-corner-fill"></span></div>
+            <div class="contact-corner corner-tr"><span class="contact-corner-fill"></span></div>
+            <div class="contact-corner corner-bl"><span class="contact-corner-fill"></span></div>
+            <div class="contact-corner corner-br"><span class="contact-corner-fill"></span></div>
+
+            <!-- Left Panel: Branding / Image -->
+            <div class="md:w-5/12 p-0 h-[400px] md:h-auto relative overflow-hidden rounded-t-[3.5rem] md:rounded-t-none md:rounded-l-[3.5rem]">
+                <img src="img/hand.png" alt="Support" class="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105">
+            </div>
+
+            <!-- Right Panel: Contact Form -->
+            <div class="md:w-7/12 p-10 md:p-16 text-left relative z-10 bg-white rounded-b-[3.5rem] md:rounded-b-none md:rounded-r-[3.5rem]">
+                <h2 class="font-['Montserrat'] mb-4 text-3xl font-extrabold text-gray-900 leading-tight">Partner with us for expert management</h2>
+                <p class="text-gray-500 mb-10 text-lg">Let’s work together to drive success! Schedule your consultation today.</p>
+                
+                <form class="flex flex-col gap-5">
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <label class="sr-only">Your Name</label>
+                            <input type="text" class="contact-input" placeholder="Your Name" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="sr-only">Business Email</label>
+                            <input type="email" class="contact-input" placeholder="Business Email" required>
+                        </div>
+                    </div>
+                    <label class="sr-only">How can we help you?</label>
+                    <textarea class="contact-input" rows="4" placeholder="How can we help you?" required></textarea>
+                    <button type="submit" class="contact-btn mt-2">Send Message Request</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</section>
+
+    <!-- Footer -->
+    <footer class="footer pt-20 pb-8 relative overflow-hidden">
+        <!-- Animated slide-in background image -->
+        <div class="footer-slide-image" id="footer-slide-image">
+            <img src="assets/hero_abstract.png" alt="Footer Design" class="w-full h-full object-cover">
+        </div>
+        <div class="container relative z-10">
+            <div class="row gy-5 mb-10 text-start">
+               <div class="col-lg-4 col-md-6 pr-lg-5">
+    <a href="#" class="inline-block mb-6 relative group z-10">
+        <img src="assets/logoventure.jpeg" 
+             alt="Venture+ Logo" 
+             class="h-20 w-auto group-hover:scale-105 transition-transform duration-300">
+    </a>
+    <p class="text-white text-sm leading-relaxed pr-lg-4">
+        Venture+ delivers modern compliance, consultancy, and operational support for businesses building confidently in the UAE.
+    </p>
+                </div>
+                <div class="col-lg-2 col-md-6">
+    <h5 class="font-bold text-white mb-6 uppercase tracking-wider text-sm">Quick Links</h5>
+    
+    <ul class="space-y-4">
+        <li><a href="#about" class="text-white hover:text-[#8B305E] transition-colors duration-300 text-sm">About Venture</a></li>
+        <li><a href="#service" class="text-white hover:text-[#8B305E] transition-colors duration-300 text-sm">Our Services</a></li>
+        <li><a href="#contact" class="text-white hover:text-[#8B305E] transition-colors duration-300 text-sm">Contact Us</a></li>
+        <li><a href="#faq" class="text-white hover:text-[#8B305E] transition-colors duration-300 text-sm">FAQ</a></li>
+    </ul>
+</div>
+                <div class="col-lg-3 col-md-6">
+    <h5 class="font-bold text-white mb-6 uppercase tracking-wider text-sm">Legal & Compliance</h5>
+    
+    <ul class="space-y-4">
+        <li><a href="#" class="text-white hover:text-[#8B305E] transition-colors duration-300 text-sm">Terms & Conditions</a></li>
+        <li><a href="#" class="text-white hover:text-[#8B305E] transition-colors duration-300 text-sm">Privacy Policy</a></li>
+    </ul>
+</div>
+                <div class="col-lg-3 col-md-6 lg:pl-8 lg:border-l lg:border-gray-200">
+                    <h5 class="font-bold text-900 mb-6 uppercase tracking-wider text-sm">Contact Details</h5>
+                    <div class="space-y-4">
+    <p class="text-white text-sm flex items-start gap-3">
+        <i class="fa-solid fa-location-dot mt-1 text-white"></i> 
+        Mubarak Salem Owaida Jaber Al Khaile Building PO Box 31455 Abu Dhabi | UAE
+    </p>
+
+    <p class="text-white text-sm flex items-center gap-3">
+        <i class="fa-solid fa-phone text-white"></i> 
+        <a href="tel:+97124477741" class="text-white hover:text-[#8B305E] transition-colors">+971 24477741</a>
+    </p>
+
+    <p class="text-white text-sm flex items-center gap-3">
+        <i class="fa-solid fa-envelope text-white"></i> 
+        <a href="mailto:Contact@ventureuae.com" class="text-white hover:text-[#8B305E] transition-colors">Contact@ventureuae.com</a>
+    </p>
+</div>
+                    <div class="flex gap-3 mt-8">
+                        <a href="#" class="h-10 w-10 flex items-center justify-center rounded-full bg-white shadow-sm ring-1 ring-black/5 text-[#8B305E] hover:bg-blue-500 hover:text-white hover:-translate-y-1 transition-all duration-300"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#" class="h-10 w-10 flex items-center justify-center rounded-full bg-white shadow-sm ring-1 ring-black/5 text-[#8B305E] hover:bg-blue-500 hover:text-white hover:-translate-y-1 transition-all duration-300"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="#" class="h-10 w-10 flex items-center justify-center rounded-full bg-white shadow-sm ring-1 ring-black/5 text-[#8B305E] hover:bg-blue-500 hover:text-white hover:-translate-y-1 transition-all duration-300"><i class="fa-brands fa-facebook-f"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-200 pt-8 text-center">
+                <p class="text400 text-sm">&copy; 2026 Venture UAE. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS Animation JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>
